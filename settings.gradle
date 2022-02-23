@@ -1,0 +1,4 @@
+include ':attr'
+include ':app'
+rootProject.name = "MyApplication3"
+include ':androidlib'
