@@ -16,7 +16,7 @@ tasks.register('sourcesJar', Jar) {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'com.snapchat.android.crema:crema-annotations:0.15.0+454b6ad.master'
+//    implementation 'com.snapchat.android.crema:crema-annotations:0.15.0+454b6ad.master'
 }
 
 artifacts {

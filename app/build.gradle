@@ -34,6 +34,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    lintOptions {
+//        disable 'MissingConstraints'
+    }
 }
 
 dependencies {
@@ -46,10 +49,10 @@ dependencies {
     implementation project(path: ':androidlib')
     testImplementation 'junit:junit:4.+'
 
-    kaptAndroidTest 'com.snapchat.android.crema:crema-compiler:0.15.0+454b6ad.master'
-    androidTestImplementation 'com.snapchat.android.crema:crema-annotations:0.15.0+454b6ad.master'
-    androidTestImplementation 'com.snapchat.android.crema:crema-base:0.15.0+454b6ad.master'
-    androidTestImplementation 'com.snapchat.android.crema:crema-cookie:0.15.0+454b6ad.master'
+//    kaptAndroidTest 'com.snapchat.android.crema:crema-compiler:0.15.0+454b6ad.master'
+//    androidTestImplementation 'com.snapchat.android.crema:crema-annotations:0.15.0+454b6ad.master'
+//    androidTestImplementation 'com.snapchat.android.crema:crema-base:0.15.0+454b6ad.master'
+//    androidTestImplementation 'com.snapchat.android.crema:crema-cookie:0.15.0+454b6ad.master'
     androidTestImplementation project(path: ':attr')
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
