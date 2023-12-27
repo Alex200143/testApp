@@ -3,8 +3,6 @@ package com.example.myapplication3;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends Activity {
     @Override
