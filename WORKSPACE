@@ -29,6 +29,7 @@ load("@rules_jvm_external//:defs.bzl", "maven_install")
 
 maven_install(
     artifacts = [
+        "com.google.android.exoplayer:exoplayer-core:2.17.1",
         "junit:junit:4.12",
         "androidx.test:monitor:1.2.0",
         "androidx.test.espresso:espresso-core:3.5.1",

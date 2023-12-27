@@ -1,4 +1,4 @@
-package com.example.myapplication3
+package com.example.myapplication3.test
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
@@ -12,6 +12,8 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 
 import androidx.test.rule.ActivityTestRule
+import com.example.myapplication3.MainActivity
+import com.example.myapplication3.R
 
 import org.junit.Rule
 

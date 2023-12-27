@@ -7,7 +7,9 @@ android_library(
     ],
     manifest = "main/AndroidManifest.xml",
     resource_files = glob(["main/res/**"]),
-    deps = []
+    deps = [
+        "@maven//:com_google_android_exoplayer_exoplayer_core",
+    ]
 )
 
 android_binary(
@@ -21,7 +23,7 @@ android_binary(
 kt_android_library(
     name = "test-lib",
     srcs = [
-        "androidTest/java/com/example/myapplication3/ExampleInstrumentedTest.kt",
+        "androidTest/java/com/example/myapplication3/test/ExampleInstrumentedTest.kt",
     ],
     manifest = "androidTest/AndroidManifest.xml",
     deps = [
