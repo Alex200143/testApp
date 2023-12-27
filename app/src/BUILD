@@ -28,6 +28,7 @@ kt_android_library(
         ":app-lib",
         "@maven//:junit_junit",
         "@maven//:androidx_test_ext_junit",
+        "@maven//:org_hamcrest_hamcrest_core",
         "@maven//:androidx_test_core",
         "@maven//:androidx_test_rules",
         "@maven//:androidx_test_espresso_espresso_core",
