@@ -1,5 +1,10 @@
 load("@rules_kotlin//kotlin:android.bzl", "kt_android_library")
 
+cc_library(
+    name = "test_so",
+    srcs = ["main/jniLibs/armeabi-v7a/libclang_rt.ubsan_standalone-aarch64-android.so"],
+)
+
 android_library(
     name = "app-lib",
     srcs = [
@@ -9,12 +14,17 @@ android_library(
     resource_files = glob(["main/res/**"]),
     deps = [
         "@maven//:com_google_android_exoplayer_exoplayer_core",
+        ":test_so", # This dependency should not be included in test apk
     ]
 )
 
 android_binary(
     name = "my_application",
     manifest = "main/AndroidManifest.xml",
+    manifest_values = {
+        "minSdkVersion": "21",
+        "targetSdkVersion": "31",
+    },
     deps = [
         ":app-lib",
     ],
@@ -41,6 +51,10 @@ android_binary(
     name = "test_application",
     instruments = ":my_application",
     manifest = "androidTest/AndroidManifest.xml",
+    manifest_values = {
+        "minSdkVersion": "21",
+        "targetSdkVersion": "31",
+    },
     deps = [
         ":test-lib",
     ],

@@ -3,10 +3,6 @@
     package="com.example.myapplication3.test"
     >
 
-    <uses-sdk android:minSdkVersion="21"
-        android:targetSdkVersion="31"
-        />
-
     <instrumentation
         android:name="androidx.test.runner.AndroidJUnitRunner"
         android:targetPackage="com.example.myapplication3" />
